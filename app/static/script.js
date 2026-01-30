@@ -3,7 +3,7 @@ let lastTimestamp = null;
 function fetchEvents() {
   fetch("/webhook/events")
     .then(res => res.json())
-    .then(data => {
+    .then(data => { 
       const ul = document.getElementById("events");
 
       data.forEach(e => {

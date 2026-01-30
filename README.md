@@ -30,6 +30,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+* Run the flask application (In production, please use Gunicorn)
 
 ```bash
 python run.py

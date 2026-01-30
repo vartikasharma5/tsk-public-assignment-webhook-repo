@@ -3,13 +3,13 @@ from app.extensions import mongo
 
 webhook = Blueprint("webhook", __name__, url_prefix="/webhook")
 
-# 👇 Health check route (browser friendly)
+# Health check route (browser friendly)
 @webhook.route("/", methods=["GET"])
 def health():
     return {"status": "Webhook running"}, 200
 
 
-# 👇 GitHub webhook receiver
+# GitHub webhook receiver
 @webhook.route("/receiver", methods=["POST"])
 def receiver():
     payload = request.json
