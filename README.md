@@ -1,47 +1,53 @@
-# Dev Assessment - Webhook Receiver
+# GitHub Webhook Receiver
 
-Please use this repository for constructing the Flask webhook receiver.
+A Flask application that receives GitHub webhook events (Push, Pull Request, Merge) and displays them in a real-time dashboard.
 
-*******************
+## Features
 
-## Setup
+- Receives GitHub webhook events via POST endpoint
+- Stores events in MongoDB with structured schema
+- Real-time dashboard that polls every 15 seconds
+- Supports Push, Pull Request, and Merge events
 
-* Create a new virtual environment
+## Prerequisites
+
+- Python 3.8+
+- Docker & Docker Compose (for MongoDB)
+
+## Quick Start
+
+### 1. Clone the repository
 
 ```bash
-pip install virtualenv
+git clone <your-repo-url>
+cd webhook-repo
 ```
 
-* Create the virtual env
+### 2. Start MongoDB
 
 ```bash
-virtualenv venv
+docker-compose up -d
 ```
 
-* Activate the virtual env
+### 3. Install dependencies
 
 ```bash
+python -m venv venv
 source venv/bin/activate
-```
-
-* Install requirements
-
-```bash
 pip install -r requirements.txt
 ```
 
-* Run the flask application (In production, please use Gunicorn)
+### 4. Configure environment (optional)
+
+```bash
+cp .env.example .env
+edit .env file accordingly
+```
+
+### 5. Run the application
 
 ```bash
 python run.py
 ```
 
-* The endpoint is at:
-
-```bash
-POST http://127.0.0.1:5000/webhook/receiver
-```
-
-You need to use this as the base and setup the flask app. Integrate this with MongoDB (commented at `app/extensions.py`)
-
-*******************
+The application will be available at `http://localhost:5000`

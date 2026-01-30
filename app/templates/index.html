@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Webhook Events</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>GitHub Webhook Events</h1>
+    
+    <div class="status">
+        <span><span class="status-dot"></span>Listening for events</span>
+        <span id="countdown">Refreshing in 15s</span>
+    </div>
+
+    <div id="events">
+        <div class="empty">Loading events...</div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

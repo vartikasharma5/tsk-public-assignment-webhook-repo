@@ -1,4 +1,36 @@
-__pycache__
-.vscode
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+*.egg
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment variables
 .env
-venv
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

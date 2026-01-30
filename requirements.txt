@@ -1,5 +1,6 @@
-Flask
-Flask-Cors
-Flask-Login
-Flask-PyMongo
-pymongo
+Flask==2.3.3
+Flask-Cors==4.0.0
+Flask-PyMongo==2.3.0
+pymongo==4.5.0
+python-dotenv==1.0.0
+pytest==7.4.3
